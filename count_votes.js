@@ -11,7 +11,6 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
         const issues = await octokit.request("GET /repos/{owner}/{repo}/issues", {
             owner: "cics305-project",
             repo: "cics305-project.github.io",
-            labels: "vote",
             state: "all",
             per_page: 100,
         });
