@@ -128,65 +128,43 @@
     </section>
 
     <!-- Poll -->
-    <!-- Poll -->
-    <section id="poll" class="container content-section text-left">
+    <section id="about" class="container content-section text-left">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="text-center">Vote Results</h2>
-                <div id="results"
-                    style="border: 1px solid #ddd; border-radius: 10px; padding: 20px; background-color: #f9f9f9; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-                    <!-- Poll results will be dynamically inserted here -->
+                <h3 class="text-center">Scenario 1 Poll Results</h3>
+                <div id="fancy-results" class="well"
+                    style="background: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+                    <!-- The fancy styled results will be rendered here -->
                 </div>
             </div>
         </div>
+        <script>
+            fetch("https://raw.githubusercontent.com/cics305-project/cics305-project.github.io/master/vote_results.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const resultsContainer = document.getElementById("fancy-results");
+                    const scenario1Data = data["scenario1"];
+
+                    if (scenario1Data) {
+                        const content = `
+                            <div style="text-align: center;">
+                                <h4>Option 1 Votes</h4>
+                                <p style="font-size: 1.5em; font-weight: bold; color: #4CAF50;">${scenario1Data.Option1}</p>
+                                <h4>Option 2 Votes</h4>
+                                <p style="font-size: 1.5em; font-weight: bold; color: #F44336;">${scenario1Data.Option2}</p>
+                            </div>
+                            <div style="margin-top: 20px; text-align: center;">
+                                <p style="font-size: 1.2em;">Thank you for participating in the poll!</p>
+                            </div>
+                        `;
+                        resultsContainer.innerHTML = content;
+                    } else {
+                        resultsContainer.innerHTML = `<p style="text-align: center;">No results available for Scenario 1 yet.</p>`;
+                    }
+                });
+        </script>
     </section>
 
-    <script>
-        fetch("https://raw.githubusercontent.com/cics305-project/cics305-project.github.io/master/vote_results.json")
-            .then((response) => response.json())
-            .then((data) => {
-                const resultsContainer = document.getElementById("results");
-                resultsContainer.innerHTML = ''; // Clear existing content
-
-                for (const scenario in data) {
-                    const scenarioData = data[scenario];
-
-                    // Create a fancy card for each scenario
-                    const scenarioCard = document.createElement("div");
-                    scenarioCard.style.border = "1px solid #ccc";
-                    scenarioCard.style.borderRadius = "10px";
-                    scenarioCard.style.margin = "10px 0";
-                    scenarioCard.style.padding = "15px";
-                    scenarioCard.style.backgroundColor = "#ffffff";
-                    scenarioCard.style.boxShadow = "0px 2px 4px rgba(0, 0, 0, 0.1)";
-
-                    scenarioCard.innerHTML = `
-                    <h3 style="color: #333; font-weight: bold;">${scenario}</h3>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 45%;">
-                            <p style="margin: 5px 0; font-size: 1.2em;">Option 1 Votes:</p>
-                            <div style="background: #007bff; color: #fff; padding: 5px; border-radius: 5px; text-align: center;">
-                                ${scenarioData.Option1}
-                            </div>
-                        </div>
-                        <div style="width: 45%;">
-                            <p style="margin: 5px 0; font-size: 1.2em;">Option 2 Votes:</p>
-                            <div style="background: #28a745; color: #fff; padding: 5px; border-radius: 5px; text-align: center;">
-                                ${scenarioData.Option2}
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-                    resultsContainer.appendChild(scenarioCard);
-                }
-            })
-            .catch((error) => {
-                console.error("Error fetching vote results:", error);
-                const resultsContainer = document.getElementById("results");
-                resultsContainer.innerHTML = `<p style="color: red;">Failed to load vote results. Please try again later.</p>`;
-            });
-    </script>
 
 
     <!-- Forum -->
