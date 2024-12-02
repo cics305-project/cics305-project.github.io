@@ -24,22 +24,17 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
             const scenario = `Scenario${scenarioMatch[1]}`;
             if (!scenarios[scenario]) {
-                scenarios[scenario] = { Option1: 0, Option2: 0, voters: new Set() };
+                scenarios[scenario] = { Option1: 0, Option2: 0 };
             }
 
             console.log(`Processing Issue: ${issue.title}`);
-            if (!scenarios[scenario].voters.has(issue.user.login)) {
-                if (issue.title.includes("Option1")) {
-                    console.log("Detected Option1 in issue title");
-                    scenarios[scenario].Option1 += 1;
-                }
-                if (issue.title.includes("Option2")) {
-                    console.log("Detected Option2 in issue title");
-                    scenarios[scenario].Option2 += 1;
-                }
-                scenarios[scenario].voters.add(issue.user.login);
-            } else {
-                console.log(`Voter ${issue.user.login} already voted in scenario`);
+            if (issue.title.includes("Option1")) {
+                console.log("Detected Option1 in issue title");
+                scenarios[scenario].Option1 += 1;
+            }
+            if (issue.title.includes("Option2")) {
+                console.log("Detected Option2 in issue title");
+                scenarios[scenario].Option2 += 1;
             }
 
             const comments = await octokit.request(
@@ -56,25 +51,16 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
             for (const comment of comments.data) {
                 console.log(`Processing comment: ${comment.body}`);
-                if (!scenarios[scenario].voters.has(comment.user.login)) {
-                    const content = comment.body.toLowerCase();
-                    if (content.includes("option1")) {
-                        console.log("Detected Option1 in comment");
-                        scenarios[scenario].Option1 += 1;
-                    }
-                    if (content.includes("option2")) {
-                        console.log("Detected Option2 in comment");
-                        scenarios[scenario].Option2 += 1;
-                    }
-                    scenarios[scenario].voters.add(comment.user.login);
-                } else {
-                    console.log(`Voter ${comment.user.login} already voted in scenario`);
+                const content = comment.body.toLowerCase();
+                if (content.includes("option1")) {
+                    console.log("Detected Option1 in comment");
+                    scenarios[scenario].Option1 += 1;
+                }
+                if (content.includes("option2")) {
+                    console.log("Detected Option2 in comment");
+                    scenarios[scenario].Option2 += 1;
                 }
             }
-        }
-
-        for (const scenario of Object.keys(scenarios)) {
-            delete scenarios[scenario].voters;
         }
 
         console.log("Final Scenarios Data:", scenarios);
