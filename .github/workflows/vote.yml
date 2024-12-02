@@ -1,6 +1,10 @@
-name: Process Votes for Multiple Scenarios
+name: Process Votes
 
 on:
+  push:
+    branches:
+      - main
+      - master
   issues:
     types: [opened]
   issue_comment:
@@ -16,13 +20,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18' # 使用 Node.js 18
 
-      - name: Count Votes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Dependencies
         run: |
-          npm install @octokit/core
+          npm install
+
+      - name: Run Vote Counter
+        run: |
           node count_votes.js
 
       - name: Commit and Push Changes
@@ -30,5 +35,5 @@ jobs:
         with:
           author_name: GitHub Action
           author_email: action@github.com
-          message: Update vote results for all scenarios
+          message: Update vote results
           add: 'vote_results.json'
