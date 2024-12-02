@@ -133,7 +133,7 @@
             .then((response) => response.json())
             .then((data) => {
                 const resultsContainer = document.getElementById("results");
-                const scenarioData = data["Scenario 1"];
+                const scenarioData = data["Scenario1"];
                 const totalVotes = scenarioData.Option1 + scenarioData.Option2;
                 const option1Percentage = ((scenarioData.Option1 / totalVotes) * 100).toFixed(1);
                 const option2Percentage = ((scenarioData.Option2 / totalVotes) * 100).toFixed(1);
