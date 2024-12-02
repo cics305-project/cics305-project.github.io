@@ -127,6 +127,27 @@
         </div>
     </section>
 
+    <!-- Poll -->
+    <section id="about" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-center">Poll</h2>
+                <p>What would you do in this situation?</p>
+            </div>
+            <script>
+                fetch("vote_results.json")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        document.getElementById("option1-votes").innerText = data.Option1;
+                        document.getElementById("option2-votes").innerText = data.Option2;
+                    });
+            </script>
+
+            <p>Option 1 votes: <span id="option1-votes"></span></p>
+            <p>Option 2 votes: <span id="option2-votes"></span></p>
+        </div>
+    </section>
+
     <!-- Forum -->
     <section id="about" class="container content-section text-left">
         <div id="gitalk-container" width="100%"></div>
