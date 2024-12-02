@@ -132,7 +132,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <script>
-                    fetch("vote_results.json")
+                    fetch("https://raw.githubusercontent.com/cics305-project/cics305-project.github.io/master/data/vote_results.json")
                         .then((response) => response.json())
                         .then((data) => {
                             const resultsContainer = document.getElementById("results");
