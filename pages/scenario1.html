@@ -124,7 +124,7 @@
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
+    <!-- <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -135,7 +135,23 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- Forum -->
+    <div id="gitalk-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script>
+        const gitalk = new Gitalk({
+            clientID: 'Ov23lic2E8fUxtH2bMix',
+            clientSecret: '14a8970b12049ffa0147a3dc1dd9e1dd97834075',
+            repo: 'cics305-project.github.io',      // The repository of store comments,
+            owner: 'cics305-project',    // GitHub repo owner
+            admin: ['cics305-project'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+        gitalk.render('gitalk-container')
+    </script>
 
     <!-- Footer -->
     <footer>
