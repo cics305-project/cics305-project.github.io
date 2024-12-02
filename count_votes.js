@@ -15,7 +15,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
             state: "all",
             per_page: 100,
         });
-
+        console.log("Fetched Issues:", issues.data);
         for (const issue of issues.data) {
             // Identify scenario from issue title
             const scenarioMatch = issue.title.match(/Scenario (\d+)/);
@@ -43,6 +43,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
                     per_page: 100,
                 }
             );
+            console.log(`Comments for Issue ${issue.number}:`, comments.data);
 
             // Count votes from comments
             for (const comment of comments.data) {
