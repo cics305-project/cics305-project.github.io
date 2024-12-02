@@ -1,0 +1,12 @@
+{
+    "name": "cics305-project",
+    "version": "1.0.0",
+    "description": "Voting system for multiple scenarios",
+    "main": "count_votes.js",
+    "dependencies": {
+        "@octokit/core": "^6.1.2"
+    },
+    "scripts": {
+        "start": "node count_votes.js"
+    }
+}
