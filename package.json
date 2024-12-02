@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Voting system for multiple scenarios",
     "main": "count_votes.js",
+    "type": "module",
     "dependencies": {
         "@octokit/core": "^6.1.2"
     },
