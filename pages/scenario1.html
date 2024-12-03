@@ -5,9 +5,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile specific meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>CICS 305</title>
 
@@ -16,6 +15,11 @@
 
     <!-- Custom CSS -->
     <link href="../css/grayscale.css" rel="stylesheet">
+    <!-- Import the existing ours.css file -->
+    <link href="../css/ours.css" rel="stylesheet">
+
+    <!-- Animate on Scroll CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,10 +31,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
-    <link href="../css/ours.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 Shim and Respond.js for IE8 support -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -42,43 +43,19 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="../index.html">
-                    <i class="fa fa-play-circle"></i> <span class="light">CICS</span> 305
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="../index.html"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="../index.html">About</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+        <!-- Navigation content here -->
     </nav>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-left">
+    <!-- About Section with Animations -->
+    <section id="about" class="container content-section text-left" data-aos="fade-up">
         <div class=" row">
             <div class="col-lg-8 col-lg-offset-2">
-                <!-- text size smaller -->
-                <h2 class="text-center" data-aos="fade-down">Scenario 1: AI-Generated Content</h2>
-                <p style="font-size: 1.4em;" data-aos="fade-up">
+                <!-- Animated Heading -->
+                <h2 class="text-center" data-aos="fade-in" data-aos-delay="200">Scenario 1: AI-Generated Content</h2>
+                <p style="font-size: 1.4em;" data-aos="fade-right" data-aos-delay="400">
                     Your company provides data information services to content providers who
-                    primarily serve
-                    customers on the internet. A new client provides content for a suite of lifestyle websites that
+                    primarily serve customers on the internet. A new client provides content for a suite of lifestyle
+                    websites that
                     include cooking, travel, fitness, and health information. The client has consistent ad revenue,
                     mostly from a couple of sponsors that use the site to market their healthcare and lifestyle
                     products. Despite not having financial woes, the client has decided to downsize their content team
@@ -86,17 +63,18 @@
                     and places the images that appear in context with the articles posted by the text division. Your
                     team has been asked to work with the client to set up a process for their website that will feed AI
                     generated images directly to the remaining 3 members of the image division who will moderate and
-                    then approve placement of the content. </p>
-                <p style="font-size: 1.4em;" data-aos="fade-up">
+                    then approve placement of the content.
+                </p>
+                <p style="font-size: 1.4em;" data-aos="fade-left" data-aos-delay="500">
                     Your team has not worked directly with AI-generated content before, and your manager is excited
                     by the potential for future client contracts that might be possible. The legal team expressed some
                     concerns about how using AI-generated images might weaken the copyright held for published
                     content, but ultimately your team was given the green light to proceed. Now you are in the design
                     phase of building a rough interface for the image team to use so that they can view and approve the
-                    AI-generated images. Meanwhile, you’ve been reading about the diﬀerent image generators available
+                    AI-generated images. Meanwhile, you’ve been reading about the different image generators available
                     in order to select one to test for this project. You start to develop concerns about the derivative
                     nature of AI generated images, and then you read about how real people employed as moderators
-                    and reviewers of generated content have suﬀered as a result. You decide to share your concerns with
+                    and reviewers of generated content have suffered as a result. You decide to share your concerns with
                     a team member, but this technology has them completely impressed. They tell you not to worry, that
                     the company has already thought of all these things and that you should let it go and just have fun
                     working on the project. At first you take their advice, until, one of the image team abruptly quits
@@ -106,30 +84,74 @@
                     For this scenario, you should assume it is you, not a fictional character, that this scenario is
                     happening to. Then, using what you have learned from the readings and based on your own values
                     and experiences, you should create an email response to one of the following two possible
-                    audiences:</p>
-                <h4 data-aos="fade-right">Option 1: Email to a Former Professor</h4>
-                <p data-aos="fade-up">
+                    audiences:
+                </p>
+                <!-- Animated Options -->
+                <h4 data-aos="fade-in" data-aos-delay="600">Option 1: Email to a Former Professor</h4>
+                <p data-aos="fade-right" data-aos-delay="700">
                     A favorite professor from your previous school reached out to you to see how you are liking
                     the job. You respond by describing the project described in the case, and then you share with your
                     previous instructor what concerns you have related to this project. You should expect to explain the
                     situation, identify your concerns, describe, and explain why those concerns are valid, discuss any
                     questions that you think you need to ask, and then volunteer what you see as the decision you must
-                    make moving forward (if any).</h4>
-                <h4 data-aos="fade-right">Option 2: Talk to Your Manager</h4>
-                <p data-aos="fade-up">
+                    make moving forward (if any).
+                </p>
+                <h4 data-aos="fade-in" data-aos-delay="800">Option 2: Talk to Your Manager</h4>
+                <p data-aos="fade-left" data-aos-delay="900">
                     You decide that you are uncomfortable carrying out this project without addressing some key
                     questions and concerns, and you decide to talk to your manager about it. Even though the project
-                    has is underway, your goal is to try to get the manager to address the ethical questions that have
+                    is underway, your goal is to try to get the manager to address the ethical questions that have
                     arisen for you and what impacts this project might have for the client, for your company, and
                     potentially the public. You will need to describe the aspects of the project that concern you or
                     raise questions for you, explaining why, and you will need to explain why you think there are
-                    ethical issues in this project that need to be resolved.</p>
+                    ethical issues in this project that need to be resolved.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Poll and Forum -->
-    <!-- Poll script -->
+    <section id="about" class="container content-section text-left" data-aos="fade-up" data-aos-delay="1000">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <!-- Poll Results -->
+                <div id="results"></div>
+                <!-- Animated Forum Heading -->
+                <h3 class="text-center" data-aos="fade-in" data-aos-delay="1100">Forum</h3>
+                <div id="gitalk-container" width="100%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Animation -->
+    <footer data-aos="fade-in" data-aos-delay="1200">
+        <div class="container text-center">
+            <p>&copy; Haoyu Zhen, Jiarui Liu, Yuncong Yang, June Jeong</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+
+    <!-- Poll Script -->
     <script>
         fetch("https://raw.githubusercontent.com/cics305-project/cics305-project.github.io/master/vote_results.json")
             .then((response) => response.json())
@@ -158,50 +180,20 @@
                 resultsContainer.appendChild(scenarioDiv);
             });
     </script>
-    <section id="about" class="container content-section text-left">
-        <div class=" row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <!--  Poll Results -->
-                <div id="results" data-aos="fade-up"></div>
-                <!-- Forum -->
-                <br>
-                <h3 class="text-center" data-aos="fade-down">Forum</h3>
-                <div id="gitalk-container" width="100%" data-aos="fade-up"></div>
-            </div>
-        </div>
-    </section>
-    <!--  Forum script -->
+
+    <!-- Forum Script -->
     <script>
         const gitalk = new Gitalk({
             clientID: 'Ov23lic2E8fUxtH2bMix',
             clientSecret: '14a8970b12049ffa0147a3dc1dd9e1dd97834075',
-            repo: 'cics305-project.github.io',      // The repository of store comments,
-            owner: 'cics305-project',    // GitHub repo owner
+            repo: 'cics305-project.github.io',      // Repository to store comments
+            owner: 'cics305-project',               // GitHub repo owner
             admin: ['cics305-project'],
-            id: location.pathname,      // Ensure uniqueness and length less than 50
-            distractionFreeMode: false  // Facebook-like distraction free mode
-        })
-        gitalk.render('gitalk-container')
+            id: location.pathname,                  // Ensure uniqueness and length less than 50
+            distractionFreeMode: false              // Facebook-like distraction free mode
+        });
+        gitalk.render('gitalk-container');
     </script>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Haoyu Zhen, Jiarui Liu, Yuncong Yang, June Jeong</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
 
 </body>
 
