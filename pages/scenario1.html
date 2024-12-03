@@ -110,21 +110,23 @@
         </div>
     </section>
 
-    <!-- Poll and Forum -->
     <section id="about" class="container content-section text-left" data-aos="fade-up" data-aos-delay="1000">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- Add Voting Instructions -->
                 <h3 class="text-center">Scenario 1 Poll Results</h3>
                 <div class="voting-instructions" style="margin-top: 20px;">
-                    <h4 style="margin-top: 40px; margin-bottom: 10px;">
-                        Vote for Your Option</h4>
-                    <p>Vote for <strong>Option 1</strong>: <a
-                            href="https://github.com/cics305-project/cics305-project.github.io/issues/2"
-                            target="_blank">Comment in Issue #2</a><br>Vote for <strong>Option 2</strong>: <a
-                            href="https://github.com/cics305-project/cics305-project.github.io/issues/3"
-                            target="_blank">Comment in Issue #3</a>
-                    </p>
+                    <h4 style="margin-top: 40px; margin-bottom: 10px;">Vote for Your Option</h4>
+                    <div class="vote-buttons">
+                        <button class="vote-btn"
+                            onclick="window.open('https://github.com/cics305-project/cics305-project.github.io/issues/2', '_blank')">
+                            Vote for Option 1
+                        </button>
+                        <button class="vote-btn"
+                            onclick="window.open('https://github.com/cics305-project/cics305-project.github.io/issues/3', '_blank')">
+                            Vote for Option 2
+                        </button>
+                    </div>
                 </div>
                 <!-- Poll Results -->
                 <div id="results"></div>
@@ -135,6 +137,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Footer with Animation -->
     <footer data-aos="fade-in" data-aos-delay="1200">

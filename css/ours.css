@@ -73,3 +73,35 @@ h4,
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.vote-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Add spacing between buttons */
+    margin-top: 20px;
+}
+
+.vote-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    /* Fancy gradient */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vote-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.vote-btn:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
