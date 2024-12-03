@@ -17,19 +17,69 @@
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
+    <!-- Animate on Scroll CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
         type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+        /* Fancy Header Animations */
+        .intro h1 {
+            animation: fadeInDown 2s ease-out;
+        }
 
+        .intro p {
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button Hover Effect */
+        .btn-circle:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .btn-circle {
+            transition: transform 0.3s ease;
+        }
+
+        /* Smooth Scrolling for Sections */
+        .content-section {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .content-section.aos-animate {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -49,7 +99,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -58,9 +107,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
     <!-- Intro Header -->
@@ -70,7 +117,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">CICS 305</h1>
-                        <p class="intro-text">Social Issues in Computing<br>Exploring Ethical Challenges in Mordern
+                        <p class="intro-text">Social Issues in Computing<br>Exploring Ethical Challenges in Modern
                             Computing</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -82,7 +129,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-left">
+    <section id="about" class="container content-section text-left" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="text-center">Scenario 1: AI-Generated Content</h2>
@@ -113,7 +160,7 @@
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
+    <section id="download" class="content-section text-center" data-aos="fade-up">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -138,11 +185,14 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 
 </body>
 
