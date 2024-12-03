@@ -26,83 +26,9 @@
         type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <style>
-        /* Fancy Header Animations */
-        .intro h1 {
-            animation: fadeInDown 2s ease-out;
-        }
+    <!-- Custom CSS -->
+    <link href="css/ours.css" rel="stylesheet">
 
-        .intro p {
-            animation: fadeInUp 2s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Button Hover Effect */
-        .btn-circle:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
-        }
-
-        .btn-circle {
-            transition: transform 0.3s ease;
-        }
-
-        /* Smooth Scrolling for Sections */
-        .content-section {
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .content-section.aos-animate {
-            opacity: 1;
-        }
-
-        /* General Animation for Options */
-        .option:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .option {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-
-        /* Update Fonts */
-        body,
-        h1,
-        h2,
-        h4,
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
