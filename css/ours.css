@@ -111,10 +111,10 @@ p {
 }
 
 .gt-comment-body {
-    font-size: 12px;
+    font-size: 12px !important;
 }
 
 .gt-comment-body,
 .markdown-body {
-    font-size: 12px;
+    font-size: 12px !important;
 }
