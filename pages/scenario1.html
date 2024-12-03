@@ -127,7 +127,8 @@
         </div>
     </section>
 
-    <!-- Poll -->
+    <!-- Poll and Forum -->
+    <!-- Poll script -->
     <script>
         fetch("https://raw.githubusercontent.com/cics305-project/cics305-project.github.io/master/vote_results.json")
             .then((response) => response.json())
@@ -156,26 +157,30 @@
                 resultsContainer.appendChild(scenarioDiv);
             });
     </script>
+    <!--  Forum script -->
+    <script>
+        const gitalk = new Gitalk({
+            clientID: 'Ov23lic2E8fUxtH2bMix',
+            clientSecret: '14a8970b12049ffa0147a3dc1dd9e1dd97834075',
+            repo: 'cics305-project.github.io',      // The repository of store comments,
+            owner: 'cics305-project',    // GitHub repo owner
+            admin: ['cics305-project'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+        gitalk.render('gitalk-container')
+    </script>
+
     <section id="about" class="container content-section text-left">
         <div class=" row">
             <div class="col-lg-8 col-lg-offset-2">
+                <!--  Poll Results -->
                 <div id="results"></div>
                 <!-- Forum -->
+                <h3 class="text-center">Discussion Forum</h3>
                 <div id="gitalk-container" width="100%"></div>
             </div>
         </div>
-        <script>
-            const gitalk = new Gitalk({
-                clientID: 'Ov23lic2E8fUxtH2bMix',
-                clientSecret: '14a8970b12049ffa0147a3dc1dd9e1dd97834075',
-                repo: 'cics305-project.github.io',      // The repository of store comments,
-                owner: 'cics305-project',    // GitHub repo owner
-                admin: ['cics305-project'],
-                id: location.pathname,      // Ensure uniqueness and length less than 50
-                distractionFreeMode: false  // Facebook-like distraction free mode
-            })
-            gitalk.render('gitalk-container')
-        </script>
     </section>
 
     <!-- Footer -->
