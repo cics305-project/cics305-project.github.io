@@ -109,12 +109,3 @@ p {
 .gt-header-textarea {
     color: #000 !important;
 }
-
-.gt-comment-body p {
-    font-size: 12px !important;
-}
-
-.gt-comment-body,
-.gt-comment-body p {
-    font-size: 12px !important;
-}
