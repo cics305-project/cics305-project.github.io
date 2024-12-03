@@ -157,6 +157,17 @@
                 resultsContainer.appendChild(scenarioDiv);
             });
     </script>
+    <section id="about" class="container content-section text-left">
+        <div class=" row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <!--  Poll Results -->
+                <div id="results"></div>
+                <!-- Forum -->
+                <h3 class="text-center">Forum</h3>
+                <div id="gitalk-container" width="100%"></div>
+            </div>
+        </div>
+    </section>
     <!--  Forum script -->
     <script>
         const gitalk = new Gitalk({
@@ -170,18 +181,6 @@
         })
         gitalk.render('gitalk-container')
     </script>
-
-    <section id="about" class="container content-section text-left">
-        <div class=" row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <!--  Poll Results -->
-                <div id="results"></div>
-                <br>
-                <!-- Forum -->
-                <div id="gitalk-container" width="100%"></div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
