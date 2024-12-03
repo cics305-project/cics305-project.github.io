@@ -115,8 +115,9 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- Add Voting Instructions -->
                 <h3 class="text-center">Scenario 1 Poll Results</h3>
-                <div class="voting-instructions" style="margin-top: 20px;">
-                    <h4 style="margin-top: 40px; margin-bottom: 10px;">Vote for Your Option</h4>
+                <!-- Poll Results -->
+                <div id="results"></div>
+                <div class="voting-instructions" style="margin-top: 20px; margin-bottom: 30px;">
                     <div class="vote-buttons">
                         <button class="vote-btn"
                             onclick="window.open('https://github.com/cics305-project/cics305-project.github.io/issues/2', '_blank')">
@@ -128,8 +129,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Poll Results -->
-                <div id="results"></div>
                 <p></p><br>
                 <!-- Animated Forum Heading -->
                 <h3 class="text-center" data-aos="fade-in" data-aos-delay="1100">Forum</h3>
@@ -180,7 +179,7 @@
 
                 const scenarioDiv = document.createElement("div");
                 scenarioDiv.innerHTML = `
-                    <p class="text-center">Total votes: ${totalVotes}</p>
+                    <!-- <p class="text-center">Total votes: ${totalVotes}</p> -->
                     <div class="progress">
                         <div class="progress-bar progress-bar-success" role="progressbar" style="width: ${option1Percentage}%">
                             Option 1: ${scenarioData.Option1} votes (${option1Percentage}%)
