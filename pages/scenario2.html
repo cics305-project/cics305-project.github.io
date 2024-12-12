@@ -51,60 +51,36 @@
         <div class=" row">
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- Animated Heading -->
-                <h2 class="text-center" data-aos="fade-in" data-aos-delay="200">Scenario 1: AI-Generated Content</h2>
+                <h2 class="text-center" data-aos="fade-in" data-aos-delay="200">Scenario 2: Using Unauthorized Data for AI Training</h2>
                 <p style="font-size: 1.4em;" data-aos="fade-right" data-aos-delay="400">
-                    Your company provides data information services to content providers who
-                    primarily serve customers on the internet. A new client provides content for a suite of lifestyle
-                    websites that
-                    include cooking, travel, fitness, and health information. The client has consistent ad revenue,
-                    mostly from a couple of sponsors that use the site to market their healthcare and lifestyle
-                    products. Despite not having financial woes, the client has decided to downsize their content team
-                    and wants to replace 40% of their image division with AI-generated content. This division produces
-                    and places the images that appear in context with the articles posted by the text division. Your
-                    team has been asked to work with the client to set up a process for their website that will feed AI
-                    generated images directly to the remaining 3 members of the image division who will moderate and
-                    then approve placement of the content.
+                    The Lab you recently in is engaged in research on literature translation using Large Language Models (LLMs). While LLMs provide a cost-effective, rapid, and multilingual approach to translation, they struggle in specific domains like web novels. The issue isn't that they make more mistakes; rather, they fail to maintain a domain-specific style and conventions. For example, an LLM might translate a web novel as if it were serious literature or playscript. This style inconsistency doesn't significantly affect automated quality metrics like BLEU or COMET but does harm readability and leaves readers unsatisfied.
+                    To address this problem, your lab hypothesizes that fine-tuning LLMs within a specific domain can enhance translation style consistency in this domain, improving readability and overall reader satisfaction. This necessitates a large amount of domain-specific novel text paired with high-quality human translations. Finding a suitable corpus is thus critical for fine-tuning. Fortunately, you discover an ideal corpus on a translation forum dedicated to translating Japanese web novels from websites like Let's Become a Novelist and Kakuyomu into English. Many experienced translators on this forum voluntarily translate these novels and share their high-quality work. The forum has already collected all these translations and performed line alignment, making it an ideal corpus for model training. The corpus has secured permission to use these translations and grants your lab access.
                 </p>
                 <p style="font-size: 1.4em;" data-aos="fade-left" data-aos-delay="500">
-                    Your team has not worked directly with AI-generated content before, and your manager is excited
-                    by the potential for future client contracts that might be possible. The legal team expressed some
-                    concerns about how using AI-generated images might weaken the copyright held for published
-                    content, but ultimately your team was given the green light to proceed. Now you are in the design
-                    phase of building a rough interface for the image team to use so that they can view and approve the
-                    AI-generated images. Meanwhile, you've been reading about the different image generators available
-                    in order to select one to test for this project. You start to develop concerns about the derivative
-                    nature of AI generated images, and then you read about how real people employed as moderators
-                    and reviewers of generated content have suffered as a result. You decide to share your concerns with
-                    a team member, but this technology has them completely impressed. They tell you not to worry, that
-                    the company has already thought of all these things and that you should let it go and just have fun
-                    working on the project. At first you take their advice, until, one of the image team abruptly quits
-                    their job after sending you a stern email about not being able to view any more images ‘like those.’
-                    You aren't sure what exactly caused the problem, but you now feel worried that you should have
-                    brought your concerns to management sooner.
+                    Excited by this opportunity, your lab begins training the LLM on a small portion of the data. The results are impressive: the model achieves notable style consistency, and readers can hardly distinguish its output from human translations. Encouraged by this success, your team plans to fine-tune the model using the entire dataset.
+                    However, upon deeper investigation last week, you realize that while you have permission to use the translations, you lack consent from the original Japanese authors to use their works in this manner. Since fine-tuning involves both the original text and the translations, their involvement is crucial.
+                    Recently, you reached out to many authors to request permission to use their novels for your model training, but most rejected your request. It appears they are willing to allow voluntary human translation but expressly prohibit the use of their works for AI training.
+                    However, as your lab continued researching the legal landscape, you found that in the U.S., training generative AI models using publicly available internet content for research may fall under "fair use." Additionally, in Japan, using copyrighted material for generative AI training without explicit permission from the copyright holders is generally allowed. 
+                </p>
+                <p style="font-size: 1.4em;" data-aos="fade-left" data-aos-delay="600">
+                    If the lab decides not to use this dataset, they would need to find another corpus, change the focused domain (web novel, Japanese -> English translation), or change the proposal topic. You're aware of the GuoFeng Webnovel corpus, which is publicly available and multilingual. However, previous experiments indicated that its translations are not of the same high quality, and the translations are at the discourse level rather than the sentence level. This would require complex pre-editing for alignment or a change in the training approach, making the fine-tuning process resource-intensive and time-consuming.
+                </p>
+                <p style="font-size: 1.4em;" data-aos="fade-left" data-aos-delay="700">
+                    Given the tight deadline for an upcoming conference, your lab leader decides that the lab should continue using the corpus from the forum and proceed with the evaluation as quickly as possible. The rationale is that since the law appears to support this course of action, and alternative options are impractical under the time constraints, proceeding is the best path forward.
                     For this scenario, you should assume it is you, not a fictional character, that this scenario is
                     happening to. Then, using what you have learned from the readings and based on your own values
                     and experiences, you should create an email response to one of the following two possible
                     audiences:
                 </p>
                 <!-- Animated Options -->
-                <h4 data-aos="fade-in" data-aos-delay="600">Option 1: Email to a Former Professor</h4>
-                <p data-aos="fade-right" data-aos-delay="700">
-                    A favorite professor from your previous school reached out to you to see how you are liking
-                    the job. You respond by describing the project described in the case, and then you share with your
-                    previous instructor what concerns you have related to this project. You should expect to explain the
-                    situation, identify your concerns, describe, and explain why those concerns are valid, discuss any
-                    questions that you think you need to ask, and then volunteer what you see as the decision you must
-                    make moving forward (if any).
+                <h4 data-aos="fade-in" data-aos-delay="800">Option 1: Email to Your Former Thesis Supervisor
+                </h4>
+                <p data-aos="fade-right" data-aos-delay="900">
+                    An esteemed professor, your thesis supervisor from your previous school, reaches out to see how you are enjoying your research and the new environment. You respond by describing the current research and the dilemma outlined above. You share the concerns you have regarding this research, explaining the situation, identifying your concerns, and discussing why those concerns are valid. You also reflect on the decision you feel you must make moving forward, seeking advice or guidance.
                 </p>
-                <h4 data-aos="fade-in" data-aos-delay="800">Option 2: Talk to Your Manager</h4>
-                <p data-aos="fade-left" data-aos-delay="900">
-                    You decide that you are uncomfortable carrying out this project without addressing some key
-                    questions and concerns, and you decide to talk to your manager about it. Even though the project
-                    is underway, your goal is to try to get the manager to address the ethical questions that have
-                    arisen for you and what impacts this project might have for the client, for your company, and
-                    potentially the public. You will need to describe the aspects of the project that concern you or
-                    raise questions for you, explaining why, and you will need to explain why you think there are
-                    ethical issues in this project that need to be resolved.
+                <h4 data-aos="fade-in" data-aos-delay="1000">Option 2: Email to Your Lab Leader</h4>
+                <p data-aos="fade-left" data-aos-delay="1100">
+                    You decide that are uncomfortable with using the entire corpus without the authors' permission and choose to discuss the issue with your lab leader once more. Your goal is to help the lab leader understand why proceeding with the entire dataset might not be a good choice and cause ethical implications and potential long-term repercussions for the lab's reputation and the research community. You need to describe the problematic aspects of the leader’s decision, explain why they are concerning, and propose what you believe is a better course of action.
                 </p>
             </div>
         </div>
@@ -172,7 +148,7 @@
             .then((response) => response.json())
             .then((data) => {
                 const resultsContainer = document.getElementById("results");
-                const scenarioData = data["Scenario1"];
+                const scenarioData = data["Scenario2"];
                 const totalVotes = scenarioData.Option1 + scenarioData.Option2;
                 const option1Percentage = ((scenarioData.Option1 / totalVotes) * 100).toFixed(1);
                 const option2Percentage = ((scenarioData.Option2 / totalVotes) * 100).toFixed(1);
