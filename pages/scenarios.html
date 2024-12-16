@@ -17,25 +17,21 @@
     <!-- Custom CSS -->
     <link href="../css/grayscale.css" rel="stylesheet">
 
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
         type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-aos="fade-down" data-aos-duration="800">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -45,11 +41,8 @@
                     <i class="fa fa-play-circle"></i> <span class="light">CICS</span> 305
                 </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -58,16 +51,14 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-left">
+    <section id="about" class="container content-section text-left" data-aos="fade-up">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2" >
-                <h2 class="text-center">Scenario 1: AI-Generated Content</h2>
+            <div class="col-lg-8 col-lg-offset-2" data-aos="fade-right" data-aos-duration="1200">
+                <h2 class="text-center" data-aos="zoom-in">Scenario 1: AI-Generated Content</h2>
                 <p>Your company, which provides data services to online content providers, is working with a new client
                     managing lifestyle websites in cooking, travel, fitness, and health. The client, despite stable ad
                     revenue, is replacing 40% of its image division with AI-generated content. Your team has been tasked
@@ -77,9 +68,9 @@
                     moderating such images, leaving you questioning the project's direction and the need to address
                     potential legal, ethical, and human impact issues.</p>
             </div>
-            <div class="text-center">
-                <a href="scenario1.html" class="btn btn-default btn-lg">See
-                    More Details on Scenario 1</a>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <a href="scenario1.html" class="btn btn-default btn-lg" data-aos="zoom-in">See More Details on Scenario
+                    1</a>
             </div>
         </div>
     </section>
@@ -87,30 +78,44 @@
     <section id="about" class="container content-section text-left" data-aos="fade-right" data-aos-delay="200">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="text-center">Scenario 2: Using Unauthorized Data for AI Training</h2>
-                <p>In this scenario, you are part of a research lab working on fine-tuning Large Language Models (LLMs) for translating Japanese web novels into English. Initially, the team discovered a high-quality, domain-specific corpus aligned at the sentence level and secured permission from the translators. However, the original authors of the works refuse to grant permission for using their content for AI training. While U.S. and Japanese laws may allow fair use in this context, the moral implications remain uncertain. Team members are divided: some argue for proceeding without consent, others advocate for removing the denied works, and still others suggest abandoning this dataset altogether. Under time pressure and leadership’s insistence, you find yourself questioning whether it’s ethically right to move forward with the entire corpus, knowing it may harm the lab's integrity and trustworthiness in the long run.</p>
+                <h2 class="text-center" data-aos="zoom-in">Scenario 2: Using Unauthorized Data for AI Training</h2>
+                <p>In this scenario, you are part of a research lab working on fine-tuning Large Language Models (LLMs)
+                    for translating Japanese web novels into English. Initially, the team discovered a high-quality,
+                    domain-specific corpus aligned at the sentence level and secured permission from the translators.
+                    However, the original authors of the works refuse to grant permission for using their content for AI
+                    training. While U.S. and Japanese laws may allow fair use in this context, the moral implications
+                    remain uncertain. Team members are divided: some argue for proceeding without consent, others
+                    advocate for removing the denied works, and still others suggest abandoning this dataset altogether.
+                    Under time pressure and leadership’s insistence, you find yourself questioning whether it’s
+                    ethically right to move forward with the entire corpus, knowing it may harm the lab's integrity and
+                    trustworthiness in the long run.</p>
             </div>
-            <div class="text-center">
-                <a href="scenario2.html" class="btn btn-default btn-lg">See
-                    More Details on Scenario 2</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="container content-section text-left" data-aos="fade-left" data-aos-delay="300">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="text-center">Scenario 3: Identity Theft Is Not A Joke</h2>
-                <p>In this scenario, you work at a company that has developed advanced deepfake technology capable of producing highly realistic videos featuring individuals who never gave their approval. A marketing firm wants to use this innovation for celebrity endorsements without seeking the celebrities’ consent. Some colleagues see it as a lucrative opportunity and a chance to stay ahead of the competition. Others worry about the ethical and legal pitfalls, including identity theft, reputational damage, and spreading misinformation. Facing internal pressure to deliver on business objectives, you must decide whether to challenge the decision, risk delaying the project, or comply and potentially contribute to a more deceptive digital world.</p>
-            </div>
-            <div class="text-center">
-                <a href="scenario3.html" class="btn btn-default btn-lg">See
-                    More Details on Scenario 3</a>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="scenario2.html" class="btn btn-default btn-lg">See More Details on Scenario 2</a>
             </div>
         </div>
     </section>
 
-    <section id="download" class="content-section text-center">
+    <section id="about" class="container content-section text-left" data-aos="fade-left" data-aos-delay="300">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-center" data-aos="zoom-in">Scenario 3: Identity Theft Is Not A Joke</h2>
+                <p>In this scenario, you work at a company that has developed advanced deepfake technology capable of
+                    producing highly realistic videos featuring individuals who never gave their approval. A marketing
+                    firm wants to use this innovation for celebrity endorsements without seeking the celebrities’
+                    consent. Some colleagues see it as a lucrative opportunity and a chance to stay ahead of the
+                    competition. Others worry about the ethical and legal pitfalls, including identity theft,
+                    reputational damage, and spreading misinformation. Facing internal pressure to deliver on business
+                    objectives, you must decide whether to challenge the decision, risk delaying the project, or comply
+                    and potentially contribute to a more deceptive digital world.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="scenario3.html" class="btn btn-default btn-lg">See More Details on Scenario 3</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="content-section text-center" data-aos="fade-up">
         <div class="download-section">
             <div class="container">
             </div>
@@ -119,7 +124,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
+        <div class="container text-center" data-aos="fade-up" data-aos-delay="700">
             <p>Copyright &copy; Haoyu Zhen, Jiarui Liu, Yuncong Yang, June Jeong</p>
         </div>
     </footer>
@@ -130,11 +135,14 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 
 </body>
 
